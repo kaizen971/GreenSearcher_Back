@@ -1,7 +1,7 @@
 import mongoose from 'mongoose';
 
 mongoose.connect(
-        'mongodb://localhost:27017/node-api',
+        'mongodb+srv://Kaizen971:Pokemon971971@greensearcher.du860nt.mongodb.net/GreenSearcher?retryWrites=true&w=majority',
         {useNewUrlParser : true, useUnifiedTopology:true},
         (err) =>{
             if(!err) console.log("Mongodb connected");

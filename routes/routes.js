@@ -6,7 +6,7 @@ import {connexion, inscription} from '../controllers/user.js'
 import { favorisByIds, checkfavorisById , favorisDelete, favorisUpdate,favorisById } from '../controllers/favoris.js';
 import LogoutController from "../controllers/logout.js"
 
-router.get('/', search);
+router.get('/search', search);
 
 router.get('/search/:nom_francais', searchProductItem);
 

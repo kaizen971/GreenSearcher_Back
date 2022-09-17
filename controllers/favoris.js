@@ -4,7 +4,6 @@ import { UserModel } from "../models/usersModel.js";
 
 export async function favorisUpdate(req,res){
     var favoris = req.params.id_favoris;
-    console.log(req.session.user);
     if(req.session.user){
     const user = await UserModel.findOne({email : req.session.user.email});
     if(favoris != null){

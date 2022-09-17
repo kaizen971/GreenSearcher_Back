@@ -38,7 +38,7 @@ async function searchProductID(regex) {
 }
 
 export const ProductModel = mongoose.model(
-    "node-api",
+    "Node-Api",
     ProductSchema,
     "posts"
 );

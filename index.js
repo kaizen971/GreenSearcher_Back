@@ -6,7 +6,7 @@ import session from 'express-session'
 import bodyParser from 'body-parser';
 import MongoStore from 'connect-mongo';
 
-
+const port = process.env.PORT || 5500
 app.use(bodyParser.json());
 app.use(
     session({
@@ -14,10 +14,10 @@ app.use(
       secret: 'Green_Searcher',
       resave: false,
       saveUninitialized: false,
-      store: MongoStore.create({ mongoUrl: "mongodb://localhost:27017/node-api" }),
+      store: MongoStore.create({ mongoUrl: "mongodb+srv://Kaizen971:Pokemon971971@greensearcher.du860nt.mongodb.net/GreenSearcher?retryWrites=true&w=majority" }),
       cookie: { maxAge: 24 * 3600 * 1000 },
     })
   );
 app.use('/product', Routes);
 
-app.listen(5500, () => console.log('Server started: 5500'))
+app.listen(port, () => console.log(`Server started: ${port}`))
