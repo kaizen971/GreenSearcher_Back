@@ -6,7 +6,7 @@ import session from 'express-session'
 import bodyParser from 'body-parser';
 import MongoStore from 'connect-mongo';
 
-const port = process.env.PORT
+const port = process.env.PORT || 5500
 app.use(bodyParser.json());
 app.use(
     session({
