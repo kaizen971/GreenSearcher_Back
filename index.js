@@ -20,4 +20,4 @@ app.use(
   );
 app.use('/product', Routes);
 
-app.listen(port, () => console.log(`Server started: ${port}`))
+app.listen(port)
