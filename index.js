@@ -1,12 +1,16 @@
   import express from 'express';
-const app = express();
 import './models/dbConfig.js';
 import Routes from './routes/routes.js';
 import session from 'express-session'
 import bodyParser from 'body-parser';
 import MongoStore from 'connect-mongo';
 
+
+const app = express();
 const port = process.env.PORT || 5500
+app.listen(port, () => {
+  console.log("App is running on port " + port);
+});
 app.use(bodyParser.json());
 app.use(
     session({
@@ -19,5 +23,3 @@ app.use(
     })
   );
 app.use('/product', Routes);
-
-app.listen(port)
