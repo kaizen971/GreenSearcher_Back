@@ -7,8 +7,8 @@ import MongoStore from 'connect-mongo';
 
 
 const app = express();
-const port = process.env.PORT || 5500
-app.listen(port, () => {
+var port = process.env.PORT || 8000;
+app.listen(port, function() {
   console.log("App is running on port " + port);
 });
 app.use(bodyParser.json());
